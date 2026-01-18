@@ -151,8 +151,6 @@
           #- type: custom-api
           #  title: Nearby Aircraft
           #  cache: 1m
-          #  url: https://opensky-network.org/api/states/all?lamin=${MY_LAT_MIN}&lomin=${MY_LON_MIN}&lamax=${MY_LAT_MAX}&lomax=${MY_LON_MAX}
-          #  template: 
 
           # https://github.com/glanceapp/community-widgets/blob/main/widgets/random-fact/README.md
           - type: custom-api
