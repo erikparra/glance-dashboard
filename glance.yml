@@ -36,6 +36,6 @@ theme:
 
 pages:
   - $include: home.yml
-  - $include: hosting.yml
-  - $include: games.yml
-  - $include: sports.yml
+  #- $include: hosting.yml
+  #- $include: games.yml
+  #- $include: sports.yml

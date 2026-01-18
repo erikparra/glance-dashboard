@@ -8,19 +8,18 @@
     head-widgets:
 
       # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#markets
-          - type: markets
-            markets:
-              - symbol: SPY
-                name: S&P 500
-              - symbol: BTC-USD
-                name: Bitcoin
-                chart-link: https://www.tradingview.com/chart/?symbol=INDEX:BTCUSD
-              - symbol: NVDA
-                name: NVIDIA
-              - symbol: AAPL
-                symbol-link: https://www.google.com/search?tbm=nws&q=apple
-                name: Apple         
-
+      #    - type: markets
+      #      markets:
+      #        - symbol: SPY
+      #          name: S&P 500
+      #        - symbol: BTC-USD
+      #          name: Bitcoin
+      #          chart-link: https://www.tradingview.com/chart/?symbol=INDEX:BTCUSD
+      #        - symbol: NVDA
+      #          name: NVIDIA
+      #        - symbol: AAPL
+      #          symbol-link: https://www.google.com/search?tbm=nws&q=apple
+      #          name: Apple         
 
     columns:
 
@@ -30,16 +29,23 @@
       - size: small
         widgets:
 
-          # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#clock
-          - type: clock
-            hour-format: 24h
-            timezones:
-              - timezone: Europe/Paris
-                label: Paris
-              - timezone: America/New_York
-                label: New York
-              - timezone: Asia/Tokyo
-                label: Tokyo
+          # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#server-stats
+          - type: server-stats
+            servers:
+            - type: local
+              name: Tank
+              hide-mountpoints-by-default: true
+              mountpoints:
+                "/mnt/disk1":
+                  hide: false
+                "/mnt/disk2":
+                  hide: false
+                "/mnt/disk3":
+                  hide: false
+                "/mnt/cache_ssd":
+                  hide: false
+                "/mnt/temp_ssd":
+                  hide: false 
 
             # https://github.com/glanceapp/community-widgets/blob/main/widgets/time-bar/README.md
           - type: group
