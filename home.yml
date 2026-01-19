@@ -129,23 +129,52 @@
           # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#monitor
           - type: monitor
             cache: 1m
-            title: Arr Services
+            title: Tank Services
             sites:
-              - title: Jellyfin
-                url: https://jellyfin.yourdomain.com
-                icon: /assets/jellyfin-logo.png
-              - title: Gitea
-                url: https://gitea.yourdomain.com
-                icon: /assets/gitea-logo.png
-              - title: Immich
-                url: https://immich.yourdomain.com
-                icon: /assets/immich-logo.png
-              - title: AdGuard Home
-                url: https://adguard.yourdomain.com
-                icon: /assets/adguard-logo.png
-              - title: Vaultwarden
-                url: https://vault.yourdomain.com
-                icon: /assets/vaultwarden-logo.png
+              - title: Authelia
+                url: https://auth.threebros.org
+                icon: sh:authelia
+                timeout: 3s
+              - title: Authelia-lldap
+                url: http://192.168.68.77:9001
+                icon: sh:lldap
+              - title: Code Server
+                url: http://192.168.68.77:9018
+                icon: sh:visual-studio-code
+              - title: Glance
+                url: https://www.threebros.org
+                check-url: http://192.168.68.77:9022
+                icon: sh:glance
+              - title: Grafana
+                url: https://grafana.threebros.org
+                check-url: http://192.168.68.77:9004
+                icon: sh:grafana
+              - title: InfluxDB
+                url: http://192.168.68.77:9020
+                icon: sh:influxdb
+              - title: Nginx Proxy Manager
+                url: http://192.168.68.77:7818/
+                icon: sh:nginx-proxy-manager
+              - title: qBittorrent
+                url: https://qbit.threebros.org
+                check-url: http://192.168.68.77:8080/
+                icon: sh:qbittorrent
+              - title: Resilio Sync
+                url: https://sync.threebros.org
+                check-url: http://192.168.68.77:8888
+                icon: sh:resilio-sync
+                alt-status-codes:
+                  - 401
+              - title: Tautulli
+                url: https://tautulli.threebros.org
+                check-url: http://192.168.68.77:8181
+                icon: sh:tautulli
+              - title: Transmission
+                url: https://trans.threebros.org
+                check-url: http://192.168.68.77:9002
+                icon: sh:transmission
+                alt-status-codes:
+                  - 401
 
           # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#rss
           
