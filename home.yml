@@ -95,21 +95,57 @@
       - size: full
         widgets:
 
-          # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#search-widget
-          - type: search
-            hide-header: true
-            search-engine: google
-            new-tab: true
-            bangs:
-              - title: YouTube
-                shortcut: "!yt"
-                url: https://www.youtube.com/results?search_query={QUERY}
-              - title: Steam
-                shortcut: "steam"  
-                url: https://store.steampowered.com/search/?term={QUERY}
+          # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#monitor
+          - type: monitor
+            cache: 1m
+            title: Arr Services
+            sites:
+              - title: Plex
+                url: https://plex.threebros.org
+                check-url: https://plex.threebros.org/identity
+                icon: sh:plex
+              - title: Sonarr
+                url: https://tv.threebros.org
+                check-url: http://192.168.68.77:8989
+                icon: sh:sonarr
+              - title: Radarr
+                url: https://tv.threebros.org
+                check-url: http://192.168.68.77:7878
+                icon: sh:radarr
+              - title: Prowlarr
+                url: https://prowlarr.threebros.org
+                check-url: http://192.168.68.77:9696
+                icon: sh:prowlarr
+              - title: Scraparr
+                url: http://192.168.68.77:9014/metrics
+                icon: sh:scraparr
+              - title: Flaresolverr
+                url: http://192.168.68.77:9021
+                icon: sh:flaresolverr
+              - title: Ombi
+                url: https://request.threebros.org
+                icon: sh:ombi
 
-
-
+          # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#monitor
+          - type: monitor
+            cache: 1m
+            title: Arr Services
+            sites:
+              - title: Jellyfin
+                url: https://jellyfin.yourdomain.com
+                icon: /assets/jellyfin-logo.png
+              - title: Gitea
+                url: https://gitea.yourdomain.com
+                icon: /assets/gitea-logo.png
+              - title: Immich
+                url: https://immich.yourdomain.com
+                icon: /assets/immich-logo.png
+              - title: AdGuard Home
+                url: https://adguard.yourdomain.com
+                icon: /assets/adguard-logo.png
+              - title: Vaultwarden
+                url: https://vault.yourdomain.com
+                icon: /assets/vaultwarden-logo.png
 
           # https://github.com/glanceapp/glance/blob/main/docs/configuration.md#rss
           
